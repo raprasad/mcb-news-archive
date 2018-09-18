@@ -1,0 +1,38 @@
+{% extends "news/base.html" %}
+{% block main_content %}
+    {% include "news/prev_next_row2.html" %}
+
+    <div class="row">
+        <div class="col-12 text-left" >
+            <br />
+            <p>
+                <a href="news_year_2017.html">News Archives</a> :
+                <a href="news_year_{{ selected_year }}.html">{{ selected_year }}</a> :
+                {{ story.title|safe }}
+        </div>
+    </div>
+
+
+    <!-- title row -->
+    <div class="row">
+        <div class="col-12 text-left" >
+            <h2 class="title">{{ story.title|safe }}</h2>
+
+            {% if story.writers %}
+            <p>{% for writer in story.writers %}{% spaceless %}
+{% if forloop.first %}by {% endif %}{% ifnotequal forloop.counter 1 %}{% if not forloop.last %}, {% endif %}{% endifnotequal %}
+    {% if forloop.last and forloop.counter > 1 %}&nbsp;and {% endif %}
+    {{ writer|safe }}{% endspaceless %}{% endfor %}
+                {#by Mary Parker#}
+            </p>
+            {% endif %}
+            <p>{{ story.pub_date|date:"F j, Y" }}</p>
+        </div>
+
+        <!-- start: story content --><div class="col-12 text-left">
+            {{ story.content|safe }}
+        </div><!-- end: story content -->
+    </div>
+    <!-- end: title row-->
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% if year_menu %}
+<div id="letter_or_year_menu">
+   Archives: &nbsp; {% for yyyy  in year_menu %}
+        {% ifequal news_year yyyy.year %}
+              <b>{{ yyyy.year }}</b>
+        {% else %}<a href="year_listing_{{ yyyy }}.html">{{ yyyy.year }}</a>{% endifequal %}
+       {% if not forloop.last %}&nbsp;|&nbsp;{% endif %}
+   {% endfor %}
+</div>
+{% endif %}

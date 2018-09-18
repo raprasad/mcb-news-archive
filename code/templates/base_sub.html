@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block page_body %}
+
+    <div id="left_col">
+        {% block left_col %}
+        <div id="left_col_menu">
+            <ul>
+                <li><a href="/">Directory</a></li>
+                <li><a href="/">Biological Links</a></li>
+                <li><a href="/">Harvard Links</a></li>
+            </ul>
+        </div>
+        {% endblock %}
+    </div>
+
+    {% include "base_print_header.html" %}
+
+    {% block main_container %}
+    main_container
+    {% endblock %}
+
+
+{% endblock %}

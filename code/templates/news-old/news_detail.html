@@ -1,0 +1,38 @@
+{% extends "sub_page.html" %}
+{% load url from future %}
+
+{% block main_container %}
+<div id="main_container">
+	{% include "page_parts/page_breadcrumb.html" %}
+    {% include "news/news_year_menu.html" %}
+	{% include "page_parts/page_title.html" %}
+
+
+	<div class="pg_stnd_content">
+
+		{% include "news/byline.html" %}
+
+       <p>{{ selected_story.pub_date|date:"F jS, Y" }} 	{% include "edit_links/news_edit.html" %}
+         </p>
+
+       <div id="pg_stnd_content">
+
+           {{ selected_story.story|safe }}
+
+		   {% for fm in faculty_members %}
+				<p>View <a href="{% url 'view_faculty_profile' fm.slug %}">{{ fm.fname }} {{ fm.lname }}'s Faculty Profile</a></p>
+		  		{#% if forloop.last %}<p>&nbsp;</p>{% endif %#}
+		 	{% endfor %}
+          	{% if selected_story.tags.count > 0 %}
+               <!-- tags --><div id="id_related_tags">Tag{{ selected_story.visible_tags.count|pluralize }}:&nbsp;
+				{% for tag in selected_story.visible_tags.all %}
+					<a href="{% url 'view_news_by_tag' tag.slug %}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
+				{% endfor %}</div>
+           {% endif %}
+            <p>{% include "twitter/mcb_tweet_nocount.html" %}</p>
+
+
+       </div><!-- end: main content -->
+	</div>
+</div><!-- end: main container -->
+   {% endblock %}

@@ -1,0 +1,14 @@
+{% if breadcrumb_handler %}
+<div id="breadcrumb">
+{% for bc in breadcrumb_handler.get_breadcrumbs %}
+    {% if forloop.last and breadcrumb_handler.has_last_breadcrumb_string %}
+        <a href="{{ bc.get_absolute_url }}">{{ bc.name|safe }}</a> {# show linked last item and "last_breadcrumb_string" #}
+		: {{ breadcrumb_handler.get_last_breadcrumb_string|safe }}
+    {% else %}{% if forloop.last  %}
+          {{ bc.name|safe }}	{# don't link the last item #}
+    {% else %}
+           <a href="{{ bc.get_absolute_url }}">{{ bc.name|safe }}</a> : {# regular item #}
+    {% endif %}{% endif %}
+{% endfor %}
+</div>
+{% endif %}

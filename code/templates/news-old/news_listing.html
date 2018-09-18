@@ -1,0 +1,57 @@
+{% extends "sub_page.html" %}
+{% load url from future %}
+
+{% block main_container %}
+<div id="main_container">
+	{% include "page_parts/page_breadcrumb.html" %}
+    {% include "news/news_year_menu.html" %}
+	{% include "page_parts/page_title.html" %}
+	<div class="pg_stnd_content">
+           {% if ERR_tag_not_found %}<div class="err_box">Sorry that tag was not found</div>{% endif %}
+
+           {% if ERR_writer_not_found %}<div class="err_box">Sorry that writer was not found</div>{% endif %}
+
+         {% ifequal news_stories.count 0 %}
+          <div class="err_box">Sorry! No news stories found for {{ news_year }}</div>
+         {% else %}
+         <div style="margin:0 0 20px 0; font-weight:bold;font-size:110%;">{{ news_stories.count }} stor{{ news_stories.count|pluralize:"y,ies" }} listed</div>
+         {% endifequal  %}
+
+
+           <table  border="0" cellpadding="0" cellspacing="0" id="tbl_news_listing">
+
+        {% for ns in news_stories %}
+            <tr valign="top" onMouseOver="this.style.backgroundColor='#fdf5ac'" onMouseOut="this.style.backgroundColor='#FFFFFF'">
+
+                <td><a name="story_number_{{ forloop.counter }}"></a>
+                    <div style="float:left; margin:5px 10px 10px 0;">{% if ns.thumbnail_image %}
+                    <a href="{% url 'view_news_story' ns.id ns.slug %}" style="border:none;"><img src="{{ ns.thumbnail_image.url }}" style="width:60px; border:1px solid #ccc;" /></a>
+                    </div>
+                {% else %}
+                    <div style="float:left; width:60px;height:60px;padding:5px;border:1px solid #ccc; margin:5px 10px 10px 0;">n/a</div>
+                {% endif %}
+
+                <div style="padding:5px 0;">
+                    <a href="{% url 'view_news_story' ns.id ns.slug %}" style="color:#134c74;font-size:100%;">{{ ns.title|safe }}</a> - <span style="color:#55627B;">{{ ns.pub_date }}</span>  {% include "edit_links/news_edit_for_list.html" %}
+
+                {% if ns.teaser %}<div style="padding:5px 0;">{{ ns.teaser|safe|truncatewords_html:10 }}</div>{% endif %}
+                {% comment %}
+                {% if ns.writers.count > 0 %}
+                    <!-- authors --><div><br />Author{{ ns.writers.count|pluralize }}:&nbsp; {% for w in ns.writers.all %}<a href="{% url 'view_news_by_writer' w.id %}">{{ w|safe }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</div>
+                {% endif %}
+                {% endcomment %}
+
+               	{% if ns.tags.count > 0 %}
+                    <!-- tags --><div>MCB News Tag{{ ns.visible_tags.count|pluralize }}:&nbsp; {% for tag in ns.visible_tags.all %}<a href="{% url 'view_news_by_tag' tag.slug %}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</div>
+                {% endif %}
+                </div>
+                </td>
+            </tr>
+            {#<td colspan="2">{{ ns.story|safe }}</td>#}
+
+        {% endfor %}
+            </table>
+
+	</div>
+</div>
+{% endblock %}

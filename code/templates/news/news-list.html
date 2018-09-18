@@ -1,0 +1,66 @@
+{% extends "news/base.html" %}
+{% block main_content %}
+
+<div class="row">
+    <div class="col-12 text-left" >
+        <br />
+        <p><b>News Archives</b>:
+            Nov 1, 2003 - Jan 6, 2017</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <div id="letter_or_year_menu">
+            {% include "news/year_menu.html" %}
+        </div>
+    </div>
+</div><!-- end: year row -->
+
+<!-- title row -->
+<div class="row">
+    <div class="col-12 text-left" >
+        <h2>NEWS</h2>
+        <p><b>{{ stories|length }}</b> stor{{ stories|pluralize:"y,ies" }} listed.</p>
+    </div>
+</div>
+<!-- end: title row-->
+
+
+<!-- story list -->
+<div class="row">
+    <div class="col-12 text-left" >
+    <table class="table table-hover" id="news-listing-tbl">
+      <tbody>
+        {% for story in stories %}
+        <tr>
+            <!-- thumb image -->
+            {% if story.thumbnail_image %}<td class="news-thumb"><a href="{{ story.link }}"><img src="{{ story.thumbnail_image }}"  alt="news thumbnail" /></a></td>{% else %}<td class="news-thumb"><a href="{{ story.link }}">(thumbnail not set on original site)</a></td>{% endif %}
+
+            <!-- story -->
+            <td>
+                <a href="{{ story.link }}" class="news-list-title">{{ story.title|safe }}</a>
+                - <span class="news-date">{{ story.pub_date|date:"N j, Y" }}</span>
+
+                {% if story.teaser %}
+                    <p>{{ story.teaser|safe|truncatewords_html:10 }}</p>
+                {% endif %}
+
+                {% if story.tags %}
+                    <p><!-- tags --><b>Tags:</b>&nbsp;
+                    {% for tag in story.tags %}
+                        {{ tag|safe }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                    </p>
+                {% endif %}
+
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    </div>
+</div>
+<!-- end: story list-->
+{% endblock %}
