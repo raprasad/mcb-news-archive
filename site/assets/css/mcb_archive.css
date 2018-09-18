@@ -1,0 +1,83 @@
+/* library/news in page menu */
+
+.container a{
+    color: #134C74;
+    text-decoration: underline;
+}
+.container a:hover{
+    color: #993333;
+}
+
+#news-page-body {
+    border: 1px solid #c5cdd7;
+}
+
+#footer-container{
+    background-color: #c5cdd7;
+    border: 1px solid #c5cdd7;
+    margin-bottom: 40px;
+}
+#footer-container div.row{
+    padding:10px 0;
+    margin: 0;
+    font-weight: normal;
+    color: #134C74;
+    background-color: #c5cdd6;
+}
+
+
+#letter_or_year_menu {
+    font-size: 100%;
+    color: #993333;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+h2{
+    line-height: 200%;
+    color: #993333;
+    font-size: 150%;
+}
+
+h2.title{
+    line-height: 150%;
+    color: #993333;
+    font-size: 150%;
+}
+
+#news-listing-tbl tbody td{
+    border: none;
+    padding-bottom: 15px;
+}
+
+#news-listing-tbl td.news-thumb a{
+    border: none;
+}
+
+#news-listing-tbl td.news-thumb a img{
+    width:60px;
+    border:1px solid #ccc;
+}
+#news-listing-tbl td .news-date{
+    color:#333;
+}
+#news-listing-tbl td a.news-list-title{
+    font-size: 110%;
+}
+
+/* "styles from the original content" */
+div.FloatL,
+div.news_img_left {
+    float: left;
+    margin: 0 20px 20px 0;
+    background-color: ffcc00;
+}
+
+div.FloatR,
+div.news_img_right {
+    float: right;
+    margin: 0 0 20px 20px;
+    background-color: ffcc00;
+}

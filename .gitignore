@@ -98,7 +98,10 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/
+code/output/*.html
+!code/output/placeholder.md
+.git
+.DS_Store

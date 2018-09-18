@@ -1,0 +1,409 @@
+body{padding:0; margin:0;
+    font-family:arial, Georgia, arial;
+    text-align:center;
+    font-size:12px;
+    background-color:#fff;
+    }
+
+#content{
+	width:990px;
+	margin:0px auto;
+	text-align:left;
+	padding:0 0px;
+    background-color:#fff;
+}
+
+img{border:none;}
+.clear{clear:both;}
+
+
+.pg_stnd_content p{ line-height:150%;
+    font-size:13px;}
+
+p.pg_timestamp{font-size:10px; color:#c5cdd6;}
+
+#overarching_div{min-width:940px;
+    border-left:1px solid #c5cdd6;
+border-right:1px solid #c5cdd6;
+background-color:#fff;
+
+}
+
+#img_header_shield{border:none; padding:15px 0 0 0;}
+
+#print_header{display:none;}
+
+#header_div{background-color:#c5cdd6; padding:15px 0 0 0; margin:0;}
+
+#header_title{ float:left; padding:0 15px 8px 15px; margin:0;
+    z-index:999;
+    }
+
+#left_col{float:left; width:150px;
+    margin:0px 0 0 0;
+}
+
+
+#main_container{ float:left;
+    width:675px;
+    text-align:left;
+    margin: 10px 0 15px 0;
+    padding: 0 0 0 20px;
+    font-size:13px;
+    font-weight:normal;
+    color:#000;}
+#main_container h2{ font-weight:bold; color:#993333; font-size:16px; margin:0; padding:10px 0;}
+#main_container a{color:#134C74; text-decoration:underline;}
+#main_container a:hover{color:#993333; text-decoration:underline;}
+#main_container a.elink{color:#397633;}
+
+/* emailer page */
+#emailer_div{ padding:0px 0px;}
+#emailer_div h2 {
+    color: #993333;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+}
+/* end: emailer page */
+
+
+/* biochemical tutors */
+#id_tutor_list ul{ list-style: none outside none;
+       margin:0;
+       padding:10px;
+}
+#id_tutor_list ul li {
+    padding:5px 0;
+    margin:0 5px;}
+#id_tutor_list ul li a.selected_tutor {color:#993333; font-weight:bold; text-decoration:none;}
+/* end: biochemical tutors */
+
+/* breadcrumb */
+#breadcrumb{ color:#134c74; padding:5px 0 10px 0;  font-weight:normal;}
+#breadcrumb a{ color:#134c74; text-decoration:underline; }
+#breadcrumb a:hover{ color:#993333;}
+
+/* library/news in page menu */
+#letter_or_year_menu {
+    font-size: 100%;
+    color: #993333;
+    margin: 10px;
+    padding: 10px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+#id_library_links ul {list-style-type:none;
+    margin:0;
+    padding:0 }
+#id_library_links ul li {padding:8px 0;
+    margin:0;
+    }
+/* image in news story, float it left */
+div.news_img_left{ float:left;
+        margin:5px 20px 15px 0;
+}
+
+div.news_img_left img{
+    border:1px solid #999;
+}
+
+div.news_img_left2 img { float:left;
+        margin:5px 20px 15px 0;
+}
+
+div.news_img_left2 img{
+    border:1px solid #999;
+}
+/* image in news story, float it right */
+div.news_img_right{ float:right;
+        margin:5px 0px 15px 20px;
+}
+
+div.news_img_right img{
+    border:1px solid #999;
+}
+
+#left_col_menu{ padding:0;
+        margin:0;
+        font-family:arial, sans-serif;
+        }
+
+#left_col_menu ul{    list-style: none outside none;
+           padding:0;
+           margin:10px 0;
+}
+
+#left_col_menu ul li{
+    font-size:13px;
+    color:#134c74;
+    padding:5px 10px 5px 15px;
+
+}
+
+#left_col_menu ul li a{
+    font-size:13px;
+    color:#134c74;
+    display:block;
+    text-decoration:none;
+}
+#left_col_menu ul li a:hover{
+    color:#993333;
+}
+
+
+/* left column menu (subpages) */
+#left_col_menu ul li a.left_menu_l2{ color:#993333; font-weight:bold;  }
+#left_col_menu ul li a.selected{ color:#993333;  }
+
+#left_col_menu ul li a.l3{
+    font-size:12px;
+}
+
+#left_col_menu ul li a.l4{
+    font-size:11px;
+    padding: 0 0 0 10px;
+    font-weight:normal;
+}
+
+#left_col_menu ul li a.l5{
+    font-size:11px;
+    padding: 0 0 0 20px;
+    font-weight:normal;
+}
+
+#left_col_menu ul li a.l6{ font-size:10px;
+  padding: 0 0 0 30px;
+  font-weight:normal;
+}
+
+
+#left_col_menu ul li a.l4.active, #left_col_menu ul li a.l5.active, #left_col_menu ul li a.l6.active{
+    font-weight:bold;
+}
+#left_col_menu ul li.mi_hide{ display:none;  }
+#left_col_menu ul li.l7{ display:none;  }
+#left_col_menu ul li.l8{ display:none;  }
+#left_col_menu ul li.l9{ display:none;  }
+
+#left_col_menu ul li a span.left_menu_active { color:#993333;}
+/* end: left column menu (subpages) */
+
+/* table with border - used for postdoc listing */
+#id_reg_tbl table{border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    margin:0;
+    padding:0;
+}
+#id_reg_tbl table td{border-bottom:1px solid #ccc;
+    border-left:1px solid #ccc;
+    padding:10px;
+}
+
+#id_reg_tbl table th{border-bottom:1px solid #ccc;
+    border-left:1px solid #ccc;
+    padding:10px;
+    padding:10px;
+}
+
+#id_reg_tbl table th{ text-align:center;
+}
+#id_reg_tbl table td.rt{ text-align:right;
+}
+/* end: table with border - used for postdoc listing */
+
+/* list formatting: teaching fellow link list */
+#id_reg_list ul{ list-style-type: none;
+         padding:0 20px;
+}
+#id_reg_list ul li{
+    margin:0;
+    padding:5px;
+}
+#id_reg_list ul li a{
+    color:#134c74;
+}
+#id_reg_list ul li a:hover{
+    color:#993333;
+}
+
+#id_reg_list2 ul{ list-style-type: none;
+         padding:0 20px;
+}
+#id_reg_list2 ul li{
+    line-height:150%;
+    margin:0;
+    padding:5px;
+}
+#id_reg_list2 ul li a{
+    color:#134c74;
+}
+#id_reg_list2 ul li a:hover{
+    color:#993333;
+}
+/* end: list formatting: teaching fellow link list */
+
+td.fac_name{ white-space:nowrap; }
+
+/* faculty emiriti  */
+#id_emiriti_list h3 {margin:0; padding:10px 0 0 0;}
+#id_emiriti_list ul{ list-style-type: none;
+         padding:0 20px;
+         margin:5px 0;
+}
+#id_emiriti_list ul li{
+    margin:0;
+    padding:5px;
+}
+#id_emiriti_list ul li a{
+    color:#134c74;
+}
+#id_emiriti_list ul li a:hover{
+    color:#993333;
+}
+/* end: faculty emiriti  */
+
+
+/* research gallery table */
+#id_research_gallery table{
+    margin:0;
+    padding:0;
+}
+#id_research_gallery table td{
+    padding:4px;
+    margin:0;
+}
+
+#id_research_gallery table td a img {
+    border:1px solid #333;
+}
+
+#id_research_gallery table td a:hover {
+    opacity:0.4;
+    filter:alpha(opacity=40);   /* For IE8 and earlier */
+}
+/* end: research gallery table */
+
+/* event detail */
+#evt_detail_div table {padding:0;
+    margin:0 0 20px 0;
+    font-size:13px;
+    line-height:150%;
+}
+#evt_detail_div table th {
+    vertical-align:top;
+    color:#333;
+    font-weight:bold;
+    padding:10px 25px 10px 0;
+    margin:0;
+}
+#evt_detail_div table td {
+    padding:10px 150px 10px 0;
+
+    color:#000;
+}
+/* msg boxes */
+div.err_box{width:380px; border:2px solid #ff0000; padding:10px; background-color:#fad4d4; margin:0 10px 10px 10px; }
+div.err_box2{width:400px; border:1px solid #ff0000; padding:10px; background-color:#fff; margin:0 0px; line-height:150%; }
+div.err_box2 a {color:#134c74;
+}
+div.err_box2 a:hover {color:#993333;
+}
+
+div.gb{width:380px;padding:10px; border:2px solid #77aa56; xbackground-color:#e3f7df;}
+/* end: msg boxes */
+div.gb a {color:#134c74;
+}
+div.gb a:hover {color:#993333;
+}
+/* legacy news setting */
+div.FloatR{ float:right; padding: 0 0 20px 20px;}
+div.FloatL{ float:left; padding: 0 20px 20px 0;}
+div.FloatTL{ float:left; padding: 0 20px 20px 0;}
+p.Medium {font-weight:bold;}
+span.Medium {font-weight:bold;}
+
+/* google search box */
+#id_header_search_box{ position:absolute;
+    top:12px;
+    margin:0 0 0 770px;
+    padding:0;
+}
+
+#id_header_username{
+  color:#134c74;
+}
+#id_header_username a{ color:#134c74;}
+#id_header_username a:hover{ color:#993333;}
+
+/* end: google search box */
+
+/* dissertations */
+#dissertation_list {font-size:15px;}
+#dissertation_list .pict_info{float:left;
+    margin:10px 20px 10px 0px;
+    width:90px;
+}
+#dissertation_list .student_info{float:left;
+    margin:7px 10px 10px 0px;
+    width:475px;
+    line-height:120%;
+}
+#dissertation_year_menu {padding:5px 0 10px 0;}
+#dissertation_year_menu a.selected {
+    font-size:120%;
+    color:#993333;
+}
+/* end: dissertations */
+
+
+/* contact list page */
+#id_contact_list table{border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    margin:0;
+    padding:0;
+}
+#id_contact_list table td{border-bottom:1px solid #ccc;
+    border-left:1px solid #ccc;
+    padding:10px;
+    line-height:130%;
+}
+
+#id_contact_list table th{border-bottom:1px solid #ccc;
+    background-color:#e1e1e1;
+    vertical-align:middle;
+    border-left:1px solid #ccc;
+    padding:10px;
+    padding:10px;
+}
+/* end: contact list page */
+
+/* news listing */
+#tbl_news_listing{
+}
+#tbl_news_listing td, #tbl_news_listing th{
+    font-size:13px;
+    padding:15px 0;
+}
+
+/* end: news listing */
+
+
+/* footer */
+#footer{padding:0 0 0 20px;
+        margin:0px 0 10px 0;
+        font-weight:normal;
+        color:#134C74;
+        background-color: #c5cdd6;
+        font-size:11px;
+        height:31px;
+        line-height:31px;
+      }
+#footer a{color:#134C74;
+    text-decoration:underline;
+    line-height:31px;
+}
+#footer a:hover{color:#993333;}
+/* end: footer */

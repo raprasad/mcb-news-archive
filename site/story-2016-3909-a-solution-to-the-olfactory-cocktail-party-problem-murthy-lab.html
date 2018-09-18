@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/favicon.ico">
+
+    <title>A Solution to the Olfactory Cocktail Party Problem [Murthy Lab] - Molecular &amp; Cellular Biology - News Archives - Harvard University</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap-4.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/mcb_archive.css" rel="stylesheet">
+    <style>
+        .container {
+            font-size:95%;
+        }
+    </style>
+  </head>
+
+  <body>
+<div class="container">
+    <div class="row" style="background-color:#c5cdd7; padding:10px 0;">
+          <div class="col-12 text-center">
+            <a class="blog-header-logo text-dark"  href="index.html">
+                <img src="assets/images/mcb_header2.png" class="img-fluid" alt="Molecular and Cellular Biology" /></a>
+          </div>
+    </div>
+</div>
+
+<div class="container" id="news-page-body">
+
+    <div class="row"  id="letter_or_year_menu">
+    <div class="col-5 text-left">
+        
+            <a href="story-2016-3908-new-questions.html">&lt;&lt;</a>
+        
+        &nbsp;
+        
+            <a href="story-2016-3908-new-questions.html">New Questions</a>
+        
+
+    </div>
+    <div class="col-2 text-center">
+        &nbsp; | &nbsp;
+    </div>
+    <div class="col-5 text-right">
+        
+            <a href="story-2016-3910-a-multi-layered-neural-computation-for-simple-arithmetic-uchida-lab.html">A Multi-layered Neural Computation for Simple Arithmetic [Uchida Lab]</a>
+        
+        &nbsp;
+        
+            <a href="story-2016-3910-a-multi-layered-neural-computation-for-simple-arithmetic-uchida-lab.html">&gt;&gt;</a>
+        
+    </div>
+</div>
+
+
+    <div class="row">
+        <div class="col-12 text-left" >
+            <br />
+            <p>
+                <a href="news_year_2017.html">News Archives</a> :
+                <a href="news_year_2016.html">2016</a> :
+                A Solution to the Olfactory Cocktail Party Problem [Murthy Lab]
+        </div>
+    </div>
+
+
+    <!-- title row -->
+    <div class="row">
+        <div class="col-12 text-left" >
+            <h2 class="title">A Solution to the Olfactory Cocktail Party Problem [Murthy Lab]</h2>
+
+            
+            <p>by 
+    
+     Alexander  Mathis
+                
+            </p>
+            
+            <p>September 1, 2016</p>
+        </div>
+
+        <!-- start: story content --><div class="col-12 text-left">
+            <div class="FloatL" style="width:420px;">
+	<img alt="" src="news_images/editor_uploads/2016/09/2016_murthy_neuron_6957.jpg" style="width: 420px; height: 280px;" /> (l to r) <a href="https://vnmurthylab.org/">Venki Murthy</a>, Alexander Mathis, Dan Rokni, Vikrant Kapoor, and Matthias Bethge (not shown)</div>
+<p>
+	How good are we at detecting a specific smell in a mixture of smells &ndash; for example, the fragrance of a stargazer lily in a large bouquet of flowers? There has been some debate about this among olfactory neuroscientists, and like most things in life, the answer depends on many factors. We previously tackled this question by devising an experiment for mice, and found that they are excellent at detecting a single odorant embedded in a mixture of up to 14 background odors; published in <a href="https://www.mcb.harvard.edu/mcb/news/news-detail/3745/detection-of-target-odors-from-mixtures-murthy-lab/">Nature Neuroscience</a> (2014).</p>
+<p>
+	Why would we think that this task is difficult? One reason is that odorant receptors (at least those found in the general-purpose olfactory system) typically respond to many different chemicals. This means different smells (single odorants or mixtures) can elicit similar patterns of activity in the population of olfactory receptors. Another reason is that mice have to generalize the task from experiencing a small fraction of all possible mixtures (~1,000 out of ~50,000 possible combinations). Third, responses to odorants can be noisy because of variability in the different steps in transforming odorant molecules in the nose to neural activity in the brain. Finally, the responses of olfactory receptors to mixtures could be a nonlinear function of the responses to individual components.<br />
+	<br />
+	In a paper appearing in <a href="http://www.sciencedirect.com/science/article/pii/S0896627316304998">Neuron</a>, we took all of the above heuristics and formalized them in a mathematical model of receptor responses to ask whether simple, biologically plausible machine decoders could perform this task as well as mice did. To constrain the encoding model, we also obtained new experimental data from mice. First, we quantified the variability in the response of olfactory receptors to odors using fluorescence microscopy in mice expressing a calcium-sensitive fluorescent protein in olfactory sensory neurons. We also sampled the responses of sensory neurons to a random subset of odorant mixtures (measuring all 50,0000 combinations was infeasible), and used this to build a statistical model of how olfactory receptors will respond to any odorant mixture that is presented. This encoding model allowed us to generate the neural response in the nose for each trial that was presented to the mouse, for which we also knew the correct answer (i.e, whether or not the target odor was present in that trial). Using the sensory response patterns as input and the correct response as the &ldquo;teacher&rdquo;, we could train different types of computer decoders to match the psychophysical performance of mice.<br />
+	<br />
+	Remarkably, we found that even a simple &ldquo;readout neuron&rdquo; that sums the activity of different receptors with different weights and then compares this sum to a threshold is sufficient to match the performance of mice in this task. Such a model is a classic and well-known machine learning algorithm called a perceptron. More complex decoders such as a support vector machine were better, but not necessary to match the mouse performance. We also found that the decoders could be built with rather sparse connectivity, mimicking the sort of wiring found in the mouse brain. Although random connectivity did not support good decoding, even brief training was enough. &nbsp;<br />
+	<br />
+	These findings demonstrate that receptors have a substantial capacity to transmit information about the composition of odor mixtures despite noise and nonlinearities such as saturation. It is useful to compare this with the visual system, where it has been also been shown that simple linear readouts can be used to decode the identity of images from neural activity patterns. The big difference is that in the visual system, the neural activity pattern used is from higher brain areas and not from the retina. For the olfactory task we used, the decoding can be directly from the activity in the nose (the olfactory receptors). Whether this is due to the simplicity of our behavioral task, or some more fundamental difference among different sensory modalities remains to be understood.<br />
+	<br />
+	The simplest decoding mechanism we found to be sufficient also made an interesting&nbsp;prediction: when trained on single odors only (without encountering mixtures of odors), the linear decoder fails to generalize to mixtures with multiple odors in the test phase. Inspired by this prediction,&nbsp; we performed this experiment in mice and found that they behaved just as predicted by the simple model. Mice could detect the target odor within mixtures of 3 or less odors, but were close to chance level for mixtures of 8 or more.<br />
+	<br />
+	Our previous work demonstrated that, counter to a widely-held view, the olfactory system has strong analytical abilities &ndash; that is, it can parse mixture stimuli and pick out individual components. Our current paper helped us understand that this ability is actually not surprising given the capacity of the system. Despite this intrinsic capacity, the analytic ability seems to require the right kind of experience or training. So, if you want to find a stargazer lily in a bouquet of flowers by its smell, you should train yourself with mixed bouquets rather than bouquets of individual flowers such as tulips, roses and such.&nbsp;<br />
+	<br />
+	[<em>Support: DFG, Marie Curie Fellowship, NIH]</em><br />
+	&nbsp;</p>
+<p>
+	Read more in <a href="http://www.sciencedirect.com/science/article/pii/S0896627316304998">Neuron</a> or download <a href="news_images/editor_uploads/2016/09/1-s2.0-S0896627316304998-main.pdf">PDF</a></p>
+<p>
+	Read more in the <a href="http://news.harvard.edu/gazette/story/2016/09/teaching-computers-to-i-d-odors/">Harvard Gazette</a></p>
+<p>
+	Read more on in Eberhard Karls Universit&auml;t T&uuml;bingen <a href="https://www.uni-tuebingen.de/aktuelles/newsfullview-aktuell/article/der-geruchssinn-geht-aufs-ganze.html">Aktuelles</a></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+
+        </div><!-- end: story content -->
+    </div>
+    <!-- end: title row-->
+
+
+</div><!-- end: main container -->
+<div class="container" id="footer-container">
+    <div class="row" id="news-footer">
+        <div class="col-12 text-left">
+                Copyright &copy; The President and Fellows of Harvard College. Created September 2018.
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script-->
+    <script src="assets/js/vendor/jquery-slim.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/bootstrap-4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    
+
+  </body>
+</html>
