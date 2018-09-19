@@ -1,12 +1,12 @@
 # MCB News Archive: Nov 1, 2003 - Jan 6, 2017
 
-This directory contains a static version of the Harvard University's Department of Molecular and Cellular Biology's News pages from Nov 1, 2003 - Jan 6, 2017.
+This repository contains a static version of news web pages from the Department of Molecular and Cellular Biology at Harvard University. The news stories span the dates Nov 1, 2003 through Jan 6, 2017.
 
-It may be browsed by opening the `site/index.html` file in a browser.
+The news stories may be browsed by opening the `site/index.html` file in a browser.
 
 This directory also includes the scripts and JSON input used to create the static pages.  It may be of future use if someone wanted to repurpose the data in the JSON files.
 
-The structure of this site is:
+The structure of this repository is:
 
 ```
 mcb-news-archive/
